@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Nippo";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #00010e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/Nippo-Variable.woff2") format("woff");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --color-button: #ffd371;
+  --color-primary: #f25b3f;
+  --color-futuristic: #00ffff;
+}
+
+/* Animations futuristes pour le dashboard */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Classes d'animation */
+.animate-scan {
+  animation: scan 2s ease-in-out infinite;
+}
+
+.animate-blink {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-typewriter {
+  animation: typewriter 3s steps(40, end);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
